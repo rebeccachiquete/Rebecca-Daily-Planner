@@ -3,16 +3,13 @@ $(document).ready(function(){
 
     // make current day 
 var currentDay = moment().format('MMM Do YYYY, h:mm:ss a');
-
     // display current day
 $("#currentDay").text(currentDay)
-
     // global variables
-var dayHours = moment().format('LT');
+var dayHours = moment().format('hh');
 var tables = $(".row");
-var hours = [1, 2, 3, 4, 5, 9, 10, 11, 12];
+var hours = [9, 10, 11, 12, 1, 2, 3, 4, 5];
 var textArea = $("textarea");
-
     // create loop
 for (var i = 0; i < hours.length; i++) {
     var dayHours = parseInt(dayHours);
@@ -29,12 +26,10 @@ for (var i = 0; i < hours.length; i++) {
         $(tableLoop).addClass("future");
     }
 }
-
     // when refreshing page, tasks will remain
 var typedTasks = JSON.parse(localStorage.getItem("Tasks"));
 
-
-if (typedTasks !==null) {
+    if (typedTasks !== null) {
     $(textArea[0]).text(typedTasks.nine);
     $(textArea[1]).text(typedTasks.ten);
     $(textArea[2]).text(typedTasks.eleven);
@@ -45,7 +40,6 @@ if (typedTasks !==null) {
     $(textArea[7]).text(typedTasks.four);
     $(textArea[8]).text(typedTasks.five);
 }
-
     // save function and tasks when saving button is clicked
 function saveTypedTasks(event) {
     event.preventDefault();
@@ -61,7 +55,6 @@ function saveTypedTasks(event) {
         four: textArea[7].value.trim(),
         five: textArea[8].value.trim(),
     }
-
     // store in logal storage
     localStorage.setItem("Tasks", JSON.stringify(tasks));
 }
