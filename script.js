@@ -8,7 +8,7 @@ $("#currentDay").text(currentDay)
     // global variables
 var dayHours = moment().format('hh');
 var tables = $(".row");
-var hours = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+var hours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 var textArea = $("textarea");
     // create loop
 for (var i = 0; i < hours.length; i++) {
