@@ -12,3 +12,5 @@ my page was not saving the "Tasks" and it was frustracting me. Then I realized o
 Tutor went over arrays and Jquery with me on wednesday so that realllllly helped. 
 
 It was nice having CSS already created. 
+
+Cant figure out what I did wrong or didnt do for the colors to not be correct with the time. I think maybe i used the wrong code for moment. I used var dayHours = moment().format('LT'); on line 11 in JS. To be honest I think that we could have had more info on moment and how to use it. I had to youtube and im just not sure if I did that right. 
